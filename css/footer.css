@@ -1,0 +1,211 @@
+footer{
+    background: rgb(235,49,49);
+    background: -moz-linear-gradient(52deg, rgba(235,49,49,1) 28%, rgba(255,132,0,1) 69%);
+    background: -webkit-linear-gradient(52deg, rgba(235,49,49,1) 28%, rgba(255,132,0,1) 69%);
+    background: linear-gradient(52deg, rgba(235,49,49,1) 28%, rgba(255,132,0,1) 69%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#eb3131",endColorstr="#ff8400",GradientType=1);
+}
+
+.footer-wrap{
+    padding: 100px 19.5%;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-wrap > div{
+    display: flex;
+    flex-direction: column;
+} 
+.footer-wrap div:nth-child(2){
+    width: 27%;
+}
+.footer-wrap ul{
+    margin-top: 88px;
+}
+.footer-wrap ul li{
+    margin-top: 22px;
+}
+.footer-wrap div:last-child ul li{
+    margin-top: 27px;
+}
+.footer-wrap ul,
+.footer-wrap ul a{
+    font-size: 18px;
+    line-height: 21px;
+    color: #fff1ad;
+    font-weight: 500;
+}
+.footer-wrap ul li:hover a{
+    color: #fff;
+    text-decoration: none;
+}
+.footer-wrap .logo-footer{
+    margin-bottom: -40px;
+}
+.footer-wrap .footer-btn{
+    border: none;
+    height: 60px;
+    width: 370px;
+    font-size: 20px;
+    line-height: 24px;
+    color: #4b589c;
+    margin-bottom: -60px;
+    font-weight: 500;
+    background-color: #fffae2;
+    box-shadow: 0 0 35px rgba(248, 244, 125, 1);
+    -moz-box-shadow: 0 0 35px rgba(248, 244, 125, 1);
+ -webkit-box-shadow: 0 0 35px rgba(248, 244, 125, 1);
+      -o-box-shadow: 0 0 35px rgba(248, 244, 125, 1);
+}
+
+.footer-wrap div:last-child ul li{
+    margin-top: 27px;
+}
+.footer-wrap div:last-child ul li i{
+    margin-right: 15px;
+    color: #fffae2;
+}
+.footer-wrap div:last-child ul li:last-child i{
+    margin-right: 35px;
+}
+.footer-copyright{ 
+    padding: 20px 19.5%;
+    display: flex;
+    font-size: 12px;
+    line-height: 21px;
+    color: #fffae2;
+}
+.footer-copyright p:first-child{
+    margin-right: 75px;
+}
+.footer-copyright p:nth-child(2){
+    width: 27%;
+}
+
+@media(max-width: 1730px){
+    .footer-wrap {
+        padding: 100px 17.5%;
+    }
+    .footer-copyright {
+        padding: 20px 17.5%;
+    }
+}
+
+@media(max-width: 1625px){
+    .footer-wrap {
+        padding: 100px 15.5%;
+    }
+    .footer-copyright {
+        padding: 20px 15.5%;
+    }
+}
+
+@media(max-width: 1530px){
+    .footer-wrap {
+        padding: 100px 13.5%;
+    }
+    .footer-copyright {
+        padding: 20px 13.5%;
+    }
+}
+
+@media(max-width: 1400px){
+    .footer-wrap {
+        padding: 100px 116px;
+    }
+    .footer-copyright {
+        padding: 20px 116px;
+    }
+}
+
+@media(max-width: 1170px){
+    .footer-wrap {
+        padding: 100px 100px;
+    }
+    .footer-copyright {
+        padding: 20px 100px;
+    }
+}
+
+@media(max-width: 768px){
+    .footer-wrap {
+        padding: 100px 120px 50px 90px;
+        flex-wrap: wrap;
+    }
+    .footer-wrap div:nth-child(2) {
+        width: 46%;
+    }
+    .footer-wrap div:last-child {
+        margin-top: 80px;
+    }
+    .footer-copyright {
+        padding: 30px 120px 10px 90px;
+        flex-wrap: wrap;
+
+    }
+    .footer-copyright p:first-child {
+        margin-right: 40px;
+    }
+    .footer-copyright p:nth-child(2){
+        width: 38%;
+    }
+    .footer-copyright p:last-child {
+        margin: 11px auto;
+    }
+
+}
+
+@media(max-width: 480px){
+    .footer-wrap {
+        padding: 110px 120px 20px 53px;
+    }
+    .footer-wrap div:first-child ul {
+        margin-top: 65px;
+    }
+    .footer-wrap div:nth-child(2){
+        width: 80%;
+    }
+    .footer-wrap div:nth-child(2) ul {
+        margin-top: 84px;
+    }
+    .footer-wrap div:last-child ul {
+        margin-top: 84px;
+    }
+    .footer-copyright {
+        padding: 15px 120px 37px 53px;
+        flex-direction: column;
+    }
+    .footer-copyright p{
+        width: 100%!important;
+        text-align: left;
+        margin-top: 20px;
+    }
+    .footer-copyright p:last-child {
+        margin: 20px 0 20px 0;
+    }
+}
+
+@media(max-width: 320px){
+    .footer-wrap {
+        padding: 50px 15px 10px 38px;
+    }
+    .footer-wrap ul li {
+        margin-top: 19px;
+    }
+    .footer-wrap div:nth-child(2) {
+        width: 90%;
+    }
+    .footer-wrap div:nth-child(2) ul {
+        margin-top: 33px;
+    }
+    .footer-wrap div:last-child {
+        margin-top: 60px;
+    }
+    .footer-wrap .footer-btn {
+        width: 290px;
+        margin-left: -23px;
+    }
+    .footer-copyright {
+        padding: 5px 15px 14px 38px;
+    }
+    
+}

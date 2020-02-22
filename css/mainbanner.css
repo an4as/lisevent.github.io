@@ -1,0 +1,165 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+}
+.main-banner{
+    background: no-repeat center 100% url(/img/mainbanner/banner1920.jpeg);
+    width: 100%;
+    height: 805px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 70px;
+}
+
+.main-banner-wrap{
+    text-align: center;
+}
+
+.main-banner .logo-banner{
+    margin-top: 127px;
+}
+.main-banner .logo-banner img{
+    width: 786px;
+}
+
+.main-banner .slogan-banner{
+    padding-top: 46px;
+}
+.main-banner .slogan-banner img{
+    width: 715px;
+}
+
+.main-banner .btn-banner{
+    margin-top: 20px;
+}
+.btn-orange{
+    width: 450px;
+    height: 80px;
+    background-color: #ff6000;
+    color: #fff;
+    font-size: 24px;
+    filter: drop-shadow(0 0 12.5px rgba(255, 132, 0, 0.5));
+
+}
+
+.btn-orange:hover{
+    background-color: #ff8400;
+    filter: drop-shadow(0 0 12.5px rgba(255,42,0,0.5));
+}
+@media(min-width: 1935px){
+    .main-banner{
+        background-size: cover;
+    }
+}
+@media(max-width:1400px){
+    .main-banner{
+        padding-right: 115px;
+    }
+    .main-banner-wrap{
+        text-align: right;
+    }
+}
+
+@media(max-width:1170px){
+    .main-banner{
+        background: no-repeat center center url(/img/mainbanner/banner1170.jpg);
+        align-items: center;
+        padding:0;
+        height: 675px;
+    }
+    .main-banner-wrap{
+        text-align: center;
+    }
+    .main-banner .logo-banner img {
+        width: 630px;
+    }
+    .main-banner .slogan-banner {
+        padding-top: 0;
+        margin-top: -25px;
+    }
+    .main-banner .slogan-banner img{
+        width: 570px;
+    }
+    .main-banner .btn-banner{
+        margin-top: 58px;
+    }
+    .btn-orange{
+        width: 370px;
+        height: 70px;    
+        font-size: 20px;
+    }
+}
+
+@media(max-width:768px){
+    .main-banner{
+        background: no-repeat center center url(/img/mainbanner/banner768.jpeg);
+        height: 440px;
+    }
+    
+    .main-banner .logo-banner{
+        margin-top: 33px;
+    }
+    .main-banner .logo-banner img {
+        width: 466px;
+    }
+    .main-banner .slogan-banner {
+        margin-top: 0;
+    }
+    .main-banner .slogan-banner img{
+        width: 433px;
+    }
+    .main-banner .btn-banner{
+        margin-top: 27px;
+    }
+    .btn-orange{
+        width: 450px;
+        height: 80px;    
+        font-size: 24px;
+    }
+}
+
+@media(max-width:480px){
+    .main-banner{
+        background-position: inherit;
+        height: 320px;
+    }
+    .main-banner .logo-banner img {
+        width: 320px;
+    }
+    .main-banner .slogan-banner img{
+        width: 302px;
+    }
+    .main-banner .btn-banner {
+        margin-top: 22px;
+    }
+    .btn-orange{
+        width: 320px;
+        height: 56px;    
+        font-size: 17px;
+    }
+}
+
+@media(max-width: 320px){
+    .main-banner{
+        height: 339px;
+    }
+    .main-banner .logo-banner {
+        margin-top: 46px;
+    }
+    .main-banner .logo-banner img {
+        width: 290px;
+    }
+    .main-banner .slogan-banner img{
+        width: 270px;
+    }
+    .main-banner .btn-banner {
+        margin-top: 28px;
+    }
+    .btn-orange{
+        width: 290px;
+        height: 56px;    
+        font-size: 17px;
+    }
+}
+

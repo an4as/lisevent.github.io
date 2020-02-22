@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="24" viewBox="0 0 40 24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ff8400;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="burger_hover.svg" data-name="burger hover.svg" class="cls-1" d="M1246,36h28v3h-28V36Zm37,0h3v3h-3V36Zm-6,0h3v3h-3V36Zm-31,10h40v3h-40V46Zm0,11h40v3h-40V57Z" transform="translate(-1246 -36)"/>
+</svg>
