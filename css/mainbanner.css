@@ -3,7 +3,7 @@ body{
     color: #333;
 }
 .main-banner{
-    background: no-repeat center 100% url(/img/mainbanner/banner1920.jpeg);
+    background: no-repeat center 100% url(../img/mainbanner/banner1920.jpeg);
     width: 100%;
     height: 805px;
     display: flex;
@@ -63,7 +63,7 @@ body{
 
 @media(max-width:1170px){
     .main-banner{
-        background: no-repeat center center url(/img/mainbanner/banner1170.jpg);
+        background: no-repeat center center url(../img/mainbanner/banner1170.jpg);
         align-items: center;
         padding:0;
         height: 675px;
@@ -93,7 +93,7 @@ body{
 
 @media(max-width:768px){
     .main-banner{
-        background: no-repeat center center url(/img/mainbanner/banner768.jpeg);
+        background: no-repeat center center url(../img/mainbanner/banner768.jpeg);
         height: 440px;
     }
     
