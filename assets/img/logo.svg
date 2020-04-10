@@ -1,0 +1,39 @@
+<svg id="logo.svg" xmlns="http://www.w3.org/2000/svg" width="463" height="73.094" viewBox="0 0 463 73.094">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #ff6000;
+      }
+
+      .cls-1, .cls-3 {
+        fill-rule: evenodd;
+      }
+
+      .cls-2 {
+        font-size: 21px;
+        fill: #1d0b00;
+        font-family: Montserrat;
+      }
+
+      .cls-3 {
+        fill: #ca332f;
+      }
+    </style>
+  </defs>
+  <g id="lis_event" data-name="lis event">
+    <path id="t" class="cls-1" d="M592,226h40v11H592V226Zm12,15h16v29H604V241Z" transform="translate(-169 -225.906)"/>
+    <path id="n" class="cls-1" d="M541,270h14V255l-14-21v36Zm45-44H572v15l14,21V226Zm-45,0,29,44h16l-29-44H541Z" transform="translate(-169 -225.906)"/>
+    <path id="e" class="cls-1" d="M491,226h16v44H491V226Zm20,0h22v11H511V226Zm0,33h22v11H511V259Zm-4-18h14v14H507V241Z" transform="translate(-169 -225.906)"/>
+    <path id="v" class="cls-1" d="M438,226h16l16,44H455Zm50,0H472l-6,18,7,20Z" transform="translate(-169 -225.906)"/>
+    <path id="e-2" data-name="e" class="cls-1" d="M393,226h16v44H393V226Zm20,0h22v11H413V226Zm0,33h22v11H413V259Zm-4-18h14v14H409V241Z" transform="translate(-169 -225.906)"/>
+    <path id="s" class="cls-1" d="M322,236l30,34s10,0,10-12l-28-32S322,224.178,322,236Zm18-10,12,13h10s1.714-13-12-13H340Zm4,44-11.966-13h-9.972s-1.709,13,11.966,13H344Z" transform="translate(-169 -225.906)"/>
+    <path id="i" class="cls-1" d="M297,226h16v11H297V226Zm0,15h16v29H297V241Z" transform="translate(-169 -225.906)"/>
+    <path id="l" class="cls-1" d="M249,226h16v44H249V226Zm20,30h20v14H269V256Z" transform="translate(-169 -225.906)"/>
+  </g>
+  <text id="Лаборатория_интересных_событий" data-name="Лаборатория интересных событий" class="cls-2" x="79.421" y="69.441">Лаборатория интересных событий</text>
+  <g id="fox">
+    <path class="cls-1" d="M169,253.553s30.2,3.121,22.5-27.553c0,0,33.8.156,35.443,35.506S191.5,299,191.5,299s16.409-.568,20.816-23.008c0,0,.765-14.668-9.283-21.019C203.037,254.973,188.209,271.68,169,253.553Z" transform="translate(-169 -225.906)"/>
+    <path class="cls-3" d="M186.722,245.315s3.255-7.6-2.813-15.622C183.909,229.693,196.56,230.829,186.722,245.315Z" transform="translate(-169 -225.906)"/>
+    <path class="cls-3" d="M169,253.553s2.894,12.469,15.471,15.906,21.477,14.093,7.033,29.257c0,0,16.9-10.746,8.157-24.428,0,0-4.144-5.8-13.783-7.385C185.878,266.9,174.466,264.587,169,253.553Z" transform="translate(-169 -225.906)"/>
+  </g>
+</svg>

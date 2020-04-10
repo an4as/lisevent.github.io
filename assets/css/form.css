@@ -1,0 +1,324 @@
+.main-form{
+    position: relative;
+}
+.main-form .form-bg{
+    margin: 150px 0;
+    height: 500px;
+    position: relative;
+}
+.main-form .form-bg::after{
+    content: "";
+    background-image: url(../img/form/dots8.png);
+    opacity: 0.05;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+}
+.main-form .form-wrap{
+    position: absolute;
+    padding: 84px 370px 110px 375px;
+    background-color: #fff;
+    top: -50px;
+    box-shadow: 0 0 20px rgba(188, 187, 193, 0.35);
+    -moz-box-shadow: 0 0 20px rgba(188, 187, 193, 0.35);
+ -webkit-box-shadow: 0 0 20px rgba(188, 187, 193, 0.35);
+      -o-box-shadow: 0 0 20px rgba(188, 187, 193, 0.35);
+}
+.main-form form,
+.modal-form{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+  
+}
+.main-form form input[type=text],
+.modal-form input[type=text]{
+    width: 100%;
+    height: 79px;
+    padding-top: 38px;
+    padding-left: 15px;
+    font-size: 24px;
+    line-height: 27px;
+    color: #c5c5c5;
+    font-style: italic;
+    border:none;
+    border-bottom: 1px solid #1d0b00;
+}
+.main-form .input-wrap,
+.modal-form .input-wrap{
+    width: 100%;
+    position: relative;
+}
+.main-form .input-wrap::after,
+.modal-form .input-wrap::after{
+    content: '';
+    position: absolute;
+    height: 10px;
+    width: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #1d0b00;
+}
+
+.main-form .btn-orange,
+.modal-form .btn-orange{
+    width: 100%;
+    height: 60px;
+    background-color: #ff6000;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 500;
+    border: none;
+    filter: drop-shadow(0 0 12.5px rgba(255, 132, 0, 0.5));
+
+}
+
+.main-form .btn-orange:hover,
+.modal-form .btn-orange:hover{
+    background-color: #ff8400;
+    filter: drop-shadow(0 0 12.5px rgba(255,42,0,0.5));
+}
+
+.form-politics{
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    padding-left: 35px;
+    margin: 40px auto;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 16px;
+    line-height: 27px;
+    color: #1d0b00;
+}
+
+.form-politics a{
+    text-decoration: underline;
+    color: #4b589c;
+}
+/* Hide the browser's default checkbox */
+.form-politics input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  /* Create a custom checkbox */
+  .form-politics .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    border: 1px solid #1d0b00;
+  }
+
+  /* On mouse-over, add a grey background color */
+.form-politics:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+
+
+  /* Create the checkmark/indicator (hidden when not checked) */
+.checkmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  
+  /* Show the checkmark when checked*/
+  .form-politics input:checked ~ .checkmark::after{
+    display: block;
+  }
+
+  /* Style the checkmark/indicator */
+.form-politics .checkmark::after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid #4b589c;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  } 
+
+  .main-form .form-decor-text,
+  .modal-form .form-decor-text{
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top:25%;
+      right: 70px;
+      align-items: flex-end;
+  }
+  .main-form .form-decor-text img:first-child,
+  .modal-form .form-decor-text img:first-child{
+      width: 735px;
+      margin-bottom: -5.5%;
+  }
+@media(max-width:1800px){
+    .main-form .form-wrap {
+        padding: 84px 300px 110px 240px;
+    } 
+    .main-form .form-decor-text img:first-child {
+        width: 600px;
+    }
+    .main-form .form-decor-text img:last-child {
+        width: 670px;
+    }
+}
+  @media(max-width: 1520px){
+    .main-form .form-wrap {
+        padding: 84px 270px 110px 116px;
+    }
+    .main-form .form-decor-text img:first-child {
+        width: 530px;
+    }
+    .main-form .form-decor-text img:last-child {
+        width: 600px;
+    }
+  }
+
+  @media (max-width: 1300px){
+    .main-form .form-bg {
+        margin: 75px 0 215px 0;
+    }
+    .main-form .form-wrap {
+        padding: 84px 232px 113px 232px;
+        top: 95px;
+        left: 50%;
+        width: 970px;
+        margin-left: -485px;
+    }
+    .main-form .form-decor-text {
+        top: -10%;
+        right: 50%;
+        margin-right: -300px;
+        align-items: center;
+    }
+    .main-form .form-decor-text img:first-child {
+        width: 514px;
+    }
+  }
+
+  @media(max-width: 970px){
+      .main-form{
+          padding-top: 210px;
+      }
+      .main-form .form-bg{
+          display: none;
+      }
+      .main-form .form-wrap {
+        padding: 76px 17% 113px 17%;
+        top: unset;
+        left: unset;
+        width: 100%;
+        margin-left: 0;
+        position: unset;
+        position: relative;
+        box-shadow: 0 0 20px rgba(188, 187, 193, 0.8);
+    -moz-box-shadow: 0 0 20px rgba(188, 187, 193, 0.8);
+    -webkit-box-shadow: 0 0 20px rgba(188, 187, 193, 0.8);
+    -o-box-shadow: 0 0 20px rgba(188, 187, 193, 0.8);
+      }
+      .main-form .form-wrap::before {
+        content: '';
+        width: 100%;
+        height: 100px;
+        position: absolute;
+        background-image: url(../img/form/dots8.png);
+        opacity: 0.05;
+        top:-100px;
+        left: 0;
+        z-index: -1;
+      }
+      .main-form form{
+          width: 100%;
+      }
+      .main-form .form-decor-text {
+        top: 9%;
+        width: 78%;
+        margin-right: -39%;
+      }
+      .main-form .form-decor-text img:first-child {
+        width: 86%;
+        }
+        .main-form .form-decor-text img:last-child {
+            width: 100%;
+        }
+}
+@media(max-width: 695px){
+    .main-form form input[type=text],
+    .main-form .btn-orange {
+        font-size: 16px;
+    }
+    .main-form .form-decor-text {
+        top: 15%;
+    }
+    
+}
+@media(max-width: 480px){
+    .main-form {
+        padding-top: 170px;
+    }
+    .main-form .form-wrap {
+        padding: 12px 52px 56px 52px;
+    }
+    .main-form form {
+        width: 372px;
+    }
+    .main-form .form-decor-text img:first-child {
+        width: 327px;
+    }
+    .main-form .form-decor-text img:last-child {
+        width: 372px;
+    }
+    .main-form .form-decor-text {
+        top: 13%;
+    }
+    .form-politics {
+        font-size: 14px;
+    }
+    .main-form form input[type=text],
+    .main-form .btn-orange {
+        font-size: 18px;
+    }
+}
+@media(max-width: 320px){
+    .main-form {
+        padding-top: 115px;
+    }
+    .main-form .form-wrap {
+        padding: 12px 15px 40px 15px;
+    }
+    .main-form form {
+        width: 290px;
+    }
+    .main-form .form-wrap::before {
+        top: -90px;
+    }
+    .main-form .btn-orange {
+        font-size: 18px;
+    }
+    .main-form form input[type=text] {
+        font-size: 14px;
+    }
+    .main-form .form-decor-text img:first-child {
+        width: 256px;
+    }
+    .main-form .form-decor-text img:last-child {
+        width: 290px;
+    }
+    .main-form .form-decor-text {
+        top: 8%;
+    }
+}

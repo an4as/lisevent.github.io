@@ -19,21 +19,209 @@
 
     <!-- Flicky Carousel CSS -->
     <link rel="stylesheet" href="https://npmcdn.com/flickity@2/dist/flickity.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity-fullscreen@1/fullscreen.css">
 
     <!-- Custom styles -->
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="css/navbar.css">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/mainbanner.css">
-    <link rel="stylesheet" href="css/categories.css">
-    <link rel="stylesheet" href="css/slider.css">
-    <link rel="stylesheet" href="css/gallery.css">
-    <link rel="stylesheet" href="css/reviews.css">
-    <link rel="stylesheet" href="css/calltoaction.css">
-    <link rel="stylesheet" href="css/form.css">
-    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/mainbanner.css">
+    <link rel="stylesheet" href="assets/css/categories.css">
+    <link rel="stylesheet" href="assets/css/slider.css">
+    <link rel="stylesheet" href="assets/css/gallery.css">
+    <link rel="stylesheet" href="assets/css/reviews.css">
+    <link rel="stylesheet" href="assets/css/calltoaction.css">
+    <link rel="stylesheet" href="assets/css/form.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
     <style>
+        html{
+            scrollbar-width: none;
+        }
+                
+        /* width */
+        ::-webkit-scrollbar {
+        width: 0;
+        
+        }
 
+        .main-gallery .flickity-enabled.is-fullscreen{
+            z-index: 1000!important;
+        } 
+        .main-gallery .carousel.is-fullscreen .flickity-viewport{
+            overflow: unset;
+            padding-top: 6%;
+            height: 100%!important;
+        }
+        .main-gallery .carousel.is-fullscreen .carousel-cell {
+          height: 100%;
+          width: 100%;
+          min-width: 100%;
+          position: static!important;
+        }
+        .main-gallery .carousel.is-fullscreen .flickity-slider{
+            display: flex;
+        }
+        .main-gallery .carousel.is-fullscreen .gallery-img-wrap{
+            border:none;
+            -webkit-box-shadow: none;
+            width: fit-content;
+            margin: 0 auto;
+            position: relative;
+        }
+        .main-gallery .carousel.is-fullscreen .gallery-img-wrap img {
+            max-width: 100%;
+        }
+        .main-gallery .flickity-page-dots{
+            display: none;
+        }
+        .main-gallery .carousel.is-fullscreen  .flickity-page-dots{
+            display: block;
+        }
+    
+        .main-gallery .carousel.is-fullscreen .flickity-prev-next-button{
+            width: 40px;
+            height: 70px;
+            bottom: 50%;
+            margin-bottom: -35px;
+        }
+        .main-gallery .carousel.is-fullscreen .flickity-prev-next-button.previous{
+            left: 35px;
+            margin-left: 0;
+        }
+        .main-gallery .carousel.is-fullscreen .flickity-prev-next-button.next{
+            right: 35px;
+            margin-right: 0;
+        }
+        .main-gallery .slider-img-title{
+            display: none;
+        }
+        .main-gallery .carousel.is-fullscreen  .slider-img-title{
+            display: flex;
+            justify-content: flex-end;
+            height: 55px;
+            background-color: hsla(0, 0%, 0%, 0.5);
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 100%;
+        }
+        .main-gallery .carousel.is-fullscreen  .slider-img-title span{
+            color: #fff;
+            font-size: 55px;
+            display: block;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+        .main-gallery .flickity-prev-next-button svg{
+            display: none;
+        }
+        .flickity-button.flickity-fullscreen-button-view{
+            display: none;
+        }
+        @media(max-width: 1170px){
+            .main-gallery .carousel.is-fullscreen .flickity-viewport{              
+                padding-top: 14%;
+            }
+        }
+        @media(max-width: 768px){
+            .main-gallery .flickity-enabled.is-fullscreen{              
+                padding-bottom: 0;
+            }
+            .main-gallery .carousel.is-fullscreen .flickity-viewport{
+                padding-top: 0;
+            }
+            .main-gallery .carousel.is-fullscreen .carousel-cell{
+                display: flex;
+                align-items: center;
+            }
+            .main-gallery .carousel.is-fullscreen .flickity-prev-next-button.previous{
+                left: 0;
+            }
+            .main-gallery .carousel.is-fullscreen .flickity-prev-next-button.next{
+                right: 0;
+            }
+        }
+        @media(max-width: 480px){
+            .main-gallery .flickity-enabled.is-fullscreen{
+                background: rgb(255, 255, 255);
+            }
+            .main-gallery .flickity-enabled.is-fullscreen .flickity-fullscreen-button-exit{
+                display: none;
+            }
+            .main-gallery .carousel.is-fullscreen .gallery-img-wrap{
+                display: flex;
+                align-items: center;
+                height: 100%;
+            }
+            .main-gallery .carousel.is-fullscreen .gallery-img-wrap img{
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        /* Modal dialog style */  
+        .modal-content{
+                flex-direction: row;
+            }   
+            .modal-dialog {
+                max-width: 1170px;
+            }
+            .modal-logo{
+                width: 470px;
+                background-color: #ff6000;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .modal-body{
+                width: 700px;
+                padding: 60px 100px;
+            }
+        
+        @media (max-width: 1169px){
+          
+            .modal-dialog {
+                max-width: 100%;
+                max-height: 100%;
+            }
+            .modal-logo{
+                display: none;
+            }
+       
+            .modal-body {
+                width: 100%;
+                
+            }
+            .modal-form{
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 768px){  
+          .modal-body {
+              padding: 60px 30px;
+          }
+      }
+
+      @media (max-width: 480px){
+        .modal-dialog {
+            margin: 0;
+            width: 100vw;
+            height: 100vh;
+        }
+          .modal-form input[type=text]{
+              font-size: 17px;
+          } 
+          .modal-form .btn-orange{
+            font-size: 17px;
+          }
+      }
+      
+      @media (max-width: 320px){
+          .modal-form input[type=text]{
+              font-size: 13px;
+          } 
+      }
     </style>
 </head>
 
@@ -129,7 +317,7 @@
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-xxl navbar-light justify-content-start">
                     <a class="navbar-brand" href="#">
-                        <img src="img/logo.svg" alt="LisEvent Menu Logo">
+                        <img src="assets/img/logo.svg" alt="LisEvent Menu Logo">
                     </a>
                     <ul class="navbar-nav info-block">
                         <li class="nav-item">
@@ -189,13 +377,13 @@
         <section class="main-banner">
             <div class="main-banner-wrap">
                 <div class="logo-banner">
-                    <img src="img/mainbanner/logo.png" alt="Лого ЛисИвент на большом баннере">
+                    <img src="assets/img/mainbanner/logo.png" alt="Лого ЛисИвент на большом баннере">
                 </div>
                 <div class="slogan-banner">
-                    <img src="img/mainbanner/slogan.png" alt="Слоган Безграничный источник идей">
+                    <img src="assets/img/mainbanner/slogan.png" alt="Слоган Безграничный источник идей">
                 </div>
                 <div class="btn-banner">
-                    <button class="btn-orange">Рассчитать мероприятие</button>
+                    <button class="btn-orange" data-toggle="modal" data-target="#exampleModal">Рассчитать мероприятие</button>
                 </div>
             </div>
         </section>
@@ -214,42 +402,42 @@
                 </div>
                 <div class="cat-box cat-box-1">
                     <div class="cat-bg"></div>
-                    <img src="img/categories/corporative.svg" alt="">
+                    <img src="assets/img/categories/corporative.svg" alt="">
                     <div class="cat-title-wrap">
                         <p> Корпоративные <br> мероприятия и <br> тимбилдинги</p>
                     </div>
                 </div>
                 <div class="cat-box cat-box-2">
                     <div class="cat-bg"></div>
-                    <img src="img/categories/new_yaar.svg" alt="">
+                    <img src="assets/img/categories/new_yaar.svg" alt="">
                     <div class="cat-title-wrap">
                         <p> 23 февраля <br> 8 марта </p>
                     </div>
                 </div>
                 <div class="cat-box cat-box-3">
                     <div class="cat-bg"></div>
-                    <img src="img/categories/intellect_new.svg" alt="">
+                    <img src="assets/img/categories/intellect_new.svg" alt="">
                     <div class="cat-title-wrap">
                         <p> Интеллектуальные</p>
                     </div>
                 </div>
                 <div class="cat-box cat-box-4">
                     <div class="cat-bg"></div>
-                    <img src="img/categories/bussines.svg" alt="">
+                    <img src="assets/img/categories/bussines.svg" alt="">
                     <div class="cat-title-wrap">
                         <p> Деловые</p>
                     </div>
                 </div>
                 <div class="cat-box cat-box-5">
                     <div class="cat-bg"></div>
-                    <img src="img/categories/art.svg" alt="">
+                    <img src="assets/img/categories/art.svg" alt="">
                     <div class="cat-title-wrap">
                         <p> Творческие</p>
                     </div>
                 </div>
                 <div class="cat-box cat-box-6">
                     <div class="cat-bg"></div>
-                    <img src="img/categories/gurman.svg" alt="">
+                    <img src="assets/img/categories/gurman.svg" alt="">
                     <div class="cat-title-wrap">
                         <p> Для эстетов <br> и гурманов</p>
                     </div>
@@ -260,42 +448,42 @@
                 <div class="carousel" data-flickity='{"freeScroll": true, "wrapAround": true}'>
                     <div class="carousel-cell">
                         <div class="cat-bg"></div>
-                        <img src="img/categories/corporative.svg" alt="">
+                        <img src="assets/img/categories/corporative.svg" alt="">
                         <div class="cat-title-wrap">
                             <p> Корпоративные <br> мероприятия и <br> тимбилдинги</p>
                         </div>
                     </div>
                     <div class="carousel-cell">
                         <div class="cat-bg"></div>
-                        <img src="img/categories/new_yaar.svg" alt="">
+                        <img src="assets/img/categories/new_yaar.svg" alt="">
                         <div class="cat-title-wrap">
                             <p> 23 февраля <br> 8 марта </p>
                         </div>
                     </div>
                     <div class="carousel-cell">
                         <div class="cat-bg"></div>
-                        <img src="img/categories/intellect_new.svg" alt="">
+                        <img src="assets/img/categories/intellect_new.svg" alt="">
                         <div class="cat-title-wrap">
                             <p> Интеллектуальные</p>
                         </div>
                     </div>
                     <div class="carousel-cell">
                         <div class="cat-bg"></div>
-                        <img src="img/categories/bussines.svg" alt="">
+                        <img src="assets/img/categories/bussines.svg" alt="">
                         <div class="cat-title-wrap">
                             <p> Деловые</p>
                         </div>
                     </div>
                     <div class="carousel-cell">
                         <div class="cat-bg"></div>
-                        <img src="img/categories/art.svg" alt="">
+                        <img src="assets/img/categories/art.svg" alt="">
                         <div class="cat-title-wrap">
                             <p> Творческие</p>
                         </div>
                     </div>
                     <div class="carousel-cell">
                         <div class="cat-bg"></div>
-                        <img src="img/categories/gurman.svg" alt="">
+                        <img src="assets/img/categories/gurman.svg" alt="">
                         <div class="cat-title-wrap">
                             <p> Для эстетов <br> и гурманов</p>
                         </div>
@@ -315,17 +503,17 @@
         <section class="main-slider">
             <div class="carousel" data-flickity='{"freeScroll": true, "cellAlign": "right"}'>
                 <div class="carousel-cell slider-1">
-                    <img class="slider-img-1920" src="img/slider/1920-1.png" alt="">
-                    <img class="slider-img-1170" src="img/slider/1170-1.png" alt="">
+                    <img class="slider-img-1920" src="assets/img/slider/1920-1.png" alt="">
+                    <img class="slider-img-1170" src="assets/img/slider/1170-1.png" alt="">
                 </div>
                 <div class="carousel-cell slider-2">
-                    <img class="slider-img-1920" src="img/slider/1920-2.png" alt="">
-                    <img class="slider-img-1170" src="img/slider/1170-2.png" alt="">
+                    <img class="slider-img-1920" src="assets/img/slider/1920-2.png" alt="">
+                    <img class="slider-img-1170" src="assets/img/slider/1170-2.png" alt="">
 
                 </div>
                 <div class="carousel-cell slider-3">
-                    <img class="slider-img-1920" src="img/slider/1920-3.png" alt="">
-                    <img class="slider-img-1170" src="img/slider/1170-3.png" alt="">
+                    <img class="slider-img-1920" src="assets/img/slider/1920-3.png" alt="">
+                    <img class="slider-img-1170" src="assets/img/slider/1170-3.png" alt="">
 
                 </div>
 
@@ -339,52 +527,69 @@
                     <h3> gallery </h3>
                 </div>
                 <div class="carousel-wrap">
-                    <div class="carousel" data-flickity='{"freeScroll": true, "cellAlign": "left", "pageDots": false}'>
+                    <div class="carousel" id="carouselOne">
                         <div class="carousel-cell ">
                             <div class="gallery-img-wrap">
-                                <img src="img/gallery/alexander-popov-2z0dC1QoP3c-unsplash.jpg" alt="">
+                                <div class="slider-img-title">
+                                    <span class="exit-carousel-btn">&times;</span>
+                                </div>
+                                <img src="assets/img/gallery/alexander-popov-2z0dC1QoP3c-unsplash.jpg" alt="">
                             </div>
                         </div>
                         <div class="carousel-cell">
                             <div class="gallery-img-wrap">
-
-                                <img src="img/gallery/austin-distel-KWsKzLGmmzQ-unsplash.jpg" alt="">
+                                <div class="slider-img-title">
+                                    <span class="exit-carousel-btn">&times;</span>
+                                </div>
+                                <img src="assets/img/gallery/austin-distel-KWsKzLGmmzQ-unsplash.jpg" alt="">
                             </div>
                         </div>
                         <div class="carousel-cell">
                             <div class="gallery-img-wrap">
-
-                                <img src="img/gallery/eric-nopanen-3skLpaOBlMw-unsplash.jpg" alt="">
+                                <div class="slider-img-title">
+                                    <span class="exit-carousel-btn">&times;</span>
+                                </div>
+                                <img src="assets/img/gallery/eric-nopanen-3skLpaOBlMw-unsplash.jpg" alt="">
                             </div>
                         </div>
                         <div class="carousel-cell">
                             <div class="gallery-img-wrap">
-
-                                <img src="img/gallery/evangeline-shaw-CiO3eBBxqJA-unsplash 2.jpg" alt="">
+                                <div class="slider-img-title">
+                                    <span class="exit-carousel-btn">&times;</span>
+                                </div>
+                                <img src="assets/img/gallery/evangeline-shaw-CiO3eBBxqJA-unsplash 2.jpg" alt="">
                             </div>
                         </div>
                         <div class="carousel-cell">
                             <div class="gallery-img-wrap">
-
-                                <img src="img/gallery/jordon-conner-tIr-PWgSYB4-unsplash.jpg" alt="">
+                                <div class="slider-img-title">
+                                    <span class="exit-carousel-btn">&times;</span>
+                                </div>
+                                <img src="assets/img/gallery/jordon-conner-tIr-PWgSYB4-unsplash.jpg" alt="">
                             </div>
                         </div>
                         <div class="carousel-cell">
                             <div class="gallery-img-wrap">
-
-                                <img src="img/gallery/people-1836105_1920.jpg" alt="">
+                                <div class="slider-img-title">
+                                    <span class="exit-carousel-btn">&times;</span>
+                                </div>
+                                <img src="assets/img/gallery/people-1836105_1920.jpg" alt="">
                             </div>
                         </div>
                         <div class="carousel-cell">
                             <div class="gallery-img-wrap">
-
-                                <img src="img/gallery/restaurant-3136935_1920.jpg" alt="">
+                                <div class="slider-img-title">
+                                    <span class="exit-carousel-btn">&times;</span>
+                                </div>
+                                <img src="assets/img/gallery/restaurant-3136935_1920.jpg" alt="">
                             </div>
                         </div>
                         <div class="carousel-cell">
                             <div class="gallery-img-wrap">
-
-                                <img src="img/gallery/stem-list-EVgsAbL51Rk-unsplash 2.jpg" alt="">
+                                <div class="slider-img-title">
+                                    <span class="exit-carousel-btn">&times;</span>
+                                </div>
+                                <img src="assets/img/gallery/stem-list-EVgsAbL51Rk-unsplash 2.jpg" alt="">
                             </div>
                         </div>
 
@@ -399,8 +604,8 @@
             <div class="cta-wrap-1"> </div>
             <div class="cta-wrap">
                 <div class="cta-img-wrap">
-                    <img src="img/calltoaction/create.png" alt="">
-                    <img src="img/calltoaction/events.png" alt="">
+                    <img src="assets/img/calltoaction/create.png" alt="">
+                    <img src="assets/img/calltoaction/events.png" alt="">
                 </div>
                 <form action="post">
                     <div class="input-wrap">
@@ -422,41 +627,40 @@
         <section class="main-reviews">
             <div class="reviews-wrap">
                 <div class="carousel-wrap">
-                    <div class="carousel"
-                        data-flickity='{"freeScroll": true, "cellAlign": "right", "pageDots": false, "rightToLeft": true}'>
-                        <div class="carousel-cell ">
+                    <div class="carousel" id="carouselTwo">
+                        <div class="carousel-cell review-cell">
                             <div class="gallery-img-wrap">
-                                <img src="img/reviews/review-01.webp" alt="">
+                                <img src="assets/img/reviews/review-01.webp" alt="">
                             </div>
                         </div>
-                        <div class="carousel-cell">
+                        <div class="carousel-cell review-cell">
                             <div class="gallery-img-wrap">
 
-                                <img src="img/reviews/review-02.webp" alt="">
+                                <img src="assets/img/reviews/review-02.webp" alt="">
                             </div>
                         </div>
-                        <div class="carousel-cell">
+                        <div class="carousel-cell review-cell">
                             <div class="gallery-img-wrap">
 
-                                <img src="img/reviews/review-03.webp" alt="">
+                                <img src="assets/img/reviews/review-03.webp" alt="">
                             </div>
                         </div>
-                        <div class="carousel-cell">
+                        <div class="carousel-cell review-cell">
                             <div class="gallery-img-wrap">
 
-                                <img src="img/reviews/review-04.webp" alt="">
+                                <img src="assets/img/reviews/review-04.webp" alt="">
                             </div>
                         </div>
-                        <div class="carousel-cell">
+                        <div class="carousel-cell review-cell">
                             <div class="gallery-img-wrap">
 
-                                <img src="img/reviews/review-05.webp" alt="">
+                                <img src="assets/img/reviews/review-05.webp" alt="">
                             </div>
                         </div>
-                        <div class="carousel-cell">
+                        <div class="carousel-cell review-cell">
                             <div class="gallery-img-wrap">
 
-                                <img src="img/reviews/review-06.webp" alt="">
+                                <img src="assets/img/reviews/review-06.webp" alt="">
                             </div>
                         </div>
                     </div>
@@ -490,8 +694,8 @@
                 </form>
             </div>
             <div class="form-decor-text">
-                <img src="img/form/besgranichniy.png" alt="">
-                <img src="img/form/istochnik_idey.png" alt="">
+                <img src="assets/img/form/besgranichniy.png" alt="">
+                <img src="assets/img/form/istochnik_idey.png" alt="">
             </div>
         </section>
         <!-- Form End -->
@@ -499,7 +703,7 @@
         <footer>
             <div class="footer-wrap">
                 <div>
-                    <img class="logo-footer" src="img/logo_footer.png" alt="">
+                    <img class="logo-footer" src="assets/img/logo_footer.png" alt="">
                     <ul>
                         <li><a href="#">Мероприятия</a></li>
                         <li><a href="#">Подбор площадок</a></li>
@@ -540,18 +744,42 @@
         </footer>
         <!-- Footer End -->
 
+        <!-- Modal dialog -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-logo">
+                    <img src="assets/img/logo_white.svg" width=270 alt="">
+                </div>
+            
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    <form action="" class="modal-form">
+                        <div class="input-wrap">
+                            <input type="text" value="Ваше имя или название компании">
+                        </div>
+                        <div class="input-wrap">
+                            <input type="text" value="+7(___) ___ - __ - __">
+                        </div>
+                        <div class="input-wrap">
+                            <input type="text" value="Ваш e-mail">
+                        </div>
+                        <label class="form-politics">Согласен с <a href="#">политикой конфиденциальности</a>
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark"></span>
+                        </label>
+                        <input class="btn-orange" type="submit" name="Рассчитать мероприятие" value="Рассчитать мероприятие"
+                            id="">
+                    </form>
+                </div>            
+              </div>
+            </div>
+          </div>
+        <!-- Modal dialog End  -->
 
-
-
-
-
-
-
-
-
-
-
-
+        
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
             integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
             crossorigin="anonymous"></script>
@@ -563,6 +791,7 @@
             crossorigin="anonymous"></script>
         <!-- Flicky carousel -->
         <script src="https://npmcdn.com/flickity@2/dist/flickity.pkgd.js"></script>
+        <script src="https://unpkg.com/flickity-fullscreen@1/fullscreen.js"></script>
 
 
         <script>
@@ -605,6 +834,69 @@
             function closeSubNav() {
                 document.getElementById("mySubNav").style.width = "0%";
             }
+        </script>
+
+        <script>
+            // var flkty = new Flickity( '#carouselOne', {
+            //     fullscreen: true,
+            // });
+            var $carousel = $('#carouselOne').flickity({  
+                fullscreen: true,
+                draggable: false, 
+                cellAlign: "left", 
+                pageDots: false,  
+                lazyLoad: 1, 
+            });
+            
+            $('#carouselOne .gallery-img-wrap').on( 'click', function() {
+                $carousel.flickity('toggleFullscreen');
+            });
+            
+            $('#carouselOne').on( 'click', '.carousel-cell', function() {
+                var index = $(this).index();          
+                $carousel.flickity( 'select', index, false, true );
+            });
+            // $('.exit-carousel-btn').on( 'click', function() {
+            //     $carousel.flickity('toggleFullscreen');
+            // });
+
+            // var imageFullScreen = Array.prototype.slice.call(document.getElementsByClassName('gallery-img-wrap'));
+            // imageFullScreen.map(image => {
+            //     image.addEventListener( 'click', function() {
+            //         flkty.viewFullscreen();
+            //     })
+            // });
+
+            // var exitFullScreenBtn = Array.prototype.slice.call(document.getElementsByClassName('exit-carousel-btn'));
+            // exitFullScreenBtn.map(btn => {
+            //     btn.addEventListener( 'click', function() {
+            //         flkty.exitFullscreen();
+            //         console.log('clicked')
+            //     })
+            // });
+
+            
+        </script>
+
+        <!-- Script: flickity review fullscreen -->
+        <script type="text/javascript">
+            var $carouselTwo = $('#carouselTwo').flickity({  
+                fullscreen: true,
+                draggable: false, 
+                cellAlign: "right", 
+                rightToLeft: true,
+                pageDots: false,  
+                lazyLoad: 1, 
+            });
+            
+            $('#carouselTwo .gallery-img-wrap').on( 'click', function() {
+                $carouselTwo.flickity('toggleFullscreen');
+            });
+            
+            $('#carouselTwo').on( 'click', '.review-cell', function() {
+                var index = $(this).index();          
+                $carouselTwo.flickity( 'select', index, false, true );
+            });
         </script>
 </body>
 
