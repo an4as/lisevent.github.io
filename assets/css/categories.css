@@ -411,9 +411,12 @@
 
   .categories .carousel-cell .cat-title-flex{
       display: flex;
+      display: -webkit-flex; 
+      -webkit-justify-content: center;
       justify-content: center;
       height: 100%;
       align-items: center;
+      -webkit-align-items: center;
   }
 
   .categories .carousel-cell img{
