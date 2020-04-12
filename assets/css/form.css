@@ -271,10 +271,11 @@
         padding-top: 170px;
     }
     .main-form .form-wrap {
-        padding: 12px 52px 56px 52px;
+        padding: 12px 0 56px 0;
     }
     .main-form form {
-        width: 372px;
+        width: 310px;
+        margin: 0 auto;
     }
     .main-form .form-decor-text img:first-child {
         width: 327px;

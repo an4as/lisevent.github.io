@@ -356,7 +356,7 @@
     .categories-wrap{
         height: auto; 
         grid-template-columns: 1fr;
-        grid-template-rows: 313px 385px 195px;
+        grid-template-rows: 360px 385px 195px;
         grid-column-gap: 0;
         padding-right: 0;
         padding-left: 0;
