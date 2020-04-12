@@ -25,6 +25,7 @@
     text-transform: uppercase;
     -webkit-writing-mode: vertical-rl;
     writing-mode: vertical-rl;
+    -webkit-text-orientation: upright;
     text-orientation: upright;
     font-size: 72px;
     color:  #4b589c;
