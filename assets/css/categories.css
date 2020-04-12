@@ -405,6 +405,17 @@
     margin-bottom: 10px;
   }
 
+  .categories .carousel-cell .cat-title-wrap-inner{
+      display: table-cell;
+  }
+
+  .categories .carousel-cell .cat-title-flex{
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      align-items: center;
+  }
+
   .categories .carousel-cell img{
     position:absolute;
     width: 170px;
@@ -413,11 +424,15 @@
     margin-left: -85px;
 }
 .categories .carousel-cell .cat-title-wrap{
-    padding-top: 23%;
+    padding-top: 30%;
 }
-.categories .carousel-cell .cat-title-wrap p{
+.categories .carousel-cell .cat-title-wrap span{
     font-size: 18px;
     line-height: 18px;
+    color: #ff6000;
+    font-family: "Montserrat";
+    font-weight: 500;
+    /* height: 56%; */
 }
   /* no margin bottom when Flickity enabled */
   .flickity-enabled .carousel-cell {
