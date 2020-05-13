@@ -74,11 +74,14 @@ footer{
     line-height: 21px;
     color: #fffae2;
 }
+.footer-copyright a{
+    color: #fffae2;
+}
 .footer-copyright p:first-child{
-    margin-right: 75px;
+    margin-right: 60px;
 }
 .footer-copyright p:nth-child(2){
-    width: 27%;
+    width: 39%;
 }
 
 @media(max-width: 1730px){
@@ -131,7 +134,8 @@ footer{
         padding: 100px 120px 50px 90px;
         flex-wrap: wrap;
     }
-    .footer-wrap div:nth-child(2) {
+    .footer-wrap div:nth-child(2),
+    .footer-copyright p:nth-child(2){
         width: 46%;
     }
     .footer-wrap div:last-child {

@@ -92,10 +92,12 @@
             right: 35px;
             margin-right: 0;
         }
-        .main-gallery .slider-img-title{
+        .main-gallery .slider-img-title,
+        .main-reviews .slider-img-title{
             display: none;
         }
-        .main-gallery .carousel.is-fullscreen  .slider-img-title{
+        .main-gallery .carousel.is-fullscreen  .slider-img-title,
+        .main-reviews .carousel.is-fullscreen .slider-img-title{
             display: flex;
             justify-content: flex-end;
             height: 55px;
@@ -145,9 +147,9 @@
             .main-gallery .flickity-enabled.is-fullscreen{
                 background: rgb(255, 255, 255);
             }
-            .main-gallery .flickity-enabled.is-fullscreen .flickity-fullscreen-button-exit{
+            /* .main-gallery .flickity-enabled.is-fullscreen .flickity-fullscreen-button-exit{
                 display: none;
-            }
+            } */
             .main-gallery .carousel.is-fullscreen .gallery-img-wrap{
                 display: flex;
                 align-items: center;
@@ -231,7 +233,7 @@
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <div class="overlay-content">
             <ul class="navbar-nav">
-                <li class="nav-item active dropdown-button" onclick="openSubNav()">
+                <li class="nav-item dropdown-button" onclick="openSubNav()">
                     <a class="nav-link" href="#" aria-haspopup="true">
                         <div class="arrow-left"></div> Мероприятия
                     </a>
@@ -293,7 +295,7 @@
                     </button>
                     <ul class="collapse navbar-collapse flex-grow-0" id="navbarNavDropdown">
                         <ul class="navbar-nav">
-                            <li class="nav-item active dropdown-button">
+                            <li class="nav-item dropdown-button">
                                 <a class="nav-link" href="#" aria-haspopup="true">
                                     Мероприятия
                                 </a>
@@ -512,65 +514,49 @@
                     <div class="carousel" id="carouselOne">
                         <div class="carousel-cell ">
                             <div class="gallery-img-wrap">
-                                <div class="slider-img-title">
-                                    <span class="exit-carousel-btn">&times;</span>
-                                </div>
+                                <div class="slider-img-title"></div>
                                 <img src="assets/img/gallery/alexander-popov-2z0dC1QoP3c-unsplash.jpg" alt="">
                             </div>
                         </div>
                         <div class="carousel-cell">
                             <div class="gallery-img-wrap">
-                                <div class="slider-img-title">
-                                    <span class="exit-carousel-btn">&times;</span>
-                                </div>
+                                <div class="slider-img-title"></div>
                                 <img src="assets/img/gallery/austin-distel-KWsKzLGmmzQ-unsplash.jpg" alt="">
                             </div>
                         </div>
                         <div class="carousel-cell">
                             <div class="gallery-img-wrap">
-                                <div class="slider-img-title">
-                                    <span class="exit-carousel-btn">&times;</span>
-                                </div>
+                                <div class="slider-img-title"></div>
                                 <img src="assets/img/gallery/eric-nopanen-3skLpaOBlMw-unsplash.jpg" alt="">
                             </div>
                         </div>
                         <div class="carousel-cell">
                             <div class="gallery-img-wrap">
-                                <div class="slider-img-title">
-                                    <span class="exit-carousel-btn">&times;</span>
-                                </div>
+                                <div class="slider-img-title"></div>
                                 <img src="assets/img/gallery/evangeline-shaw-CiO3eBBxqJA-unsplash 2.jpg" alt="">
                             </div>
                         </div>
                         <div class="carousel-cell">
                             <div class="gallery-img-wrap">
-                                <div class="slider-img-title">
-                                    <span class="exit-carousel-btn">&times;</span>
-                                </div>
+                                <div class="slider-img-title"></div>
                                 <img src="assets/img/gallery/jordon-conner-tIr-PWgSYB4-unsplash.jpg" alt="">
                             </div>
                         </div>
                         <div class="carousel-cell">
                             <div class="gallery-img-wrap">
-                                <div class="slider-img-title">
-                                    <span class="exit-carousel-btn">&times;</span>
-                                </div>
+                                <div class="slider-img-title"></div>
                                 <img src="assets/img/gallery/people-1836105_1920.jpg" alt="">
                             </div>
                         </div>
                         <div class="carousel-cell">
                             <div class="gallery-img-wrap">
-                                <div class="slider-img-title">
-                                    <span class="exit-carousel-btn">&times;</span>
-                                </div>
+                                <div class="slider-img-title"></div>
                                 <img src="assets/img/gallery/restaurant-3136935_1920.jpg" alt="">
                             </div>
                         </div>
                         <div class="carousel-cell">
                             <div class="gallery-img-wrap">
-                                <div class="slider-img-title">
-                                    <span class="exit-carousel-btn">&times;</span>
-                                </div>
+                                <div class="slider-img-title"></div>
                                 <img src="assets/img/gallery/stem-list-EVgsAbL51Rk-unsplash 2.jpg" alt="">
                             </div>
                         </div>
@@ -612,36 +598,37 @@
                     <div class="carousel" id="carouselTwo">
                         <div class="carousel-cell review-cell">
                             <div class="gallery-img-wrap">
+                                <div class="slider-img-title"></div>
                                 <img src="assets/img/reviews/review-01.webp" alt="">
                             </div>
                         </div>
                         <div class="carousel-cell review-cell">
                             <div class="gallery-img-wrap">
-
+                                <div class="slider-img-title"></div>
                                 <img src="assets/img/reviews/review-02.webp" alt="">
                             </div>
                         </div>
                         <div class="carousel-cell review-cell">
                             <div class="gallery-img-wrap">
-
+                                <div class="slider-img-title"></div>
                                 <img src="assets/img/reviews/review-03.webp" alt="">
                             </div>
                         </div>
                         <div class="carousel-cell review-cell">
                             <div class="gallery-img-wrap">
-
+                                <div class="slider-img-title"></div>
                                 <img src="assets/img/reviews/review-04.webp" alt="">
                             </div>
                         </div>
                         <div class="carousel-cell review-cell">
                             <div class="gallery-img-wrap">
-
+                                <div class="slider-img-title"></div>
                                 <img src="assets/img/reviews/review-05.webp" alt="">
                             </div>
                         </div>
                         <div class="carousel-cell review-cell">
                             <div class="gallery-img-wrap">
-
+                                <div class="slider-img-title"></div>
                                 <img src="assets/img/reviews/review-06.webp" alt="">
                             </div>
                         </div>
@@ -685,7 +672,7 @@
         <footer>
             <div class="footer-wrap">
                 <div>
-                    <img class="logo-footer" src="assets/img/logo_footer.png" alt="">
+                    <img class="logo-footer" src="assets/img/logo_footer.svg" alt="">
                     <ul>
                         <li><a href="#">Мероприятия</a></li>
                         <li><a href="#">Подбор площадок</a></li>
@@ -708,20 +695,23 @@
                 <div>
                     <button class="footer-btn">Заказать мероприятие</button>
                     <ul>
-                        <li><i class="fas fa-phone-square-alt" style="font-size: 20px;"></i> 8(499) 755 90 80</li>
-                        <li><i class="fas fa-envelope" style="font-size: 18px;"></i>info@lisevent.ru</li>
+                        <li><a href="tel: +84997559080"><i class="fas fa-phone-square-alt" style="font-size: 20px;"></i> 8(499) 755 90 80</a></li>
+                        <li><a href="mailto:info@lisevent.ru?subject=%D0%97%D0%B0%D0%BF%D1%80%D0%BE%D1%81%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%20lisevent.ru"><i class="fas fa-envelope" style="font-size: 18px;"></i>info@lisevent.ru</a></li>
                         <li><i class="fas fa-clock" style="font-size: 18px;"></i> 9.00-20.00</li>
                         <li><i class="fas fa-map-marker-alt" style="font-size: 20px;"></i>Москва, Щелковское шоссе, 23А
                         </li>
-                        <li style="font-size: 30px;"><i class="fab fa-facebook-square"></i><i
-                                class="fab fa-instagram"></i> <i class="fab fa-vk"></i></li>
+                        <li style="font-size: 30px;">
+                            <a href="#"><i class="fab fa-facebook-square"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a> 
+                            <a href="https://www.instagram.com/lis_event/"><i class="fab fa-vk"></i></a>
+                        </li>
                     </ul>
                 </div>
             </div>
             <div class="footer-copyright">
                 <p>2019 Лаборатория Интересных Событий</p>
-                <p>Политика конфиденциальности</p>
-                <p>Developed by Hanna's</p>
+                <p><a href="#">Политика конфиденциальности</a></p>
+                <p><a href="#">Developed by Hanna's</a></p>
             </div>
         </footer>
         <!-- Footer End -->
@@ -831,7 +821,7 @@
             });
             
             $('#carouselOne .gallery-img-wrap').on( 'click', function() {
-                $carousel.flickity('toggleFullscreen');
+                $carousel.flickity('viewFullscreen');
             });
             
             $('#carouselOne').on( 'click', '.carousel-cell', function() {
